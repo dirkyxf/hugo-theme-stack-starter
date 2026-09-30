@@ -1,16 +1,55 @@
-media: static/uploads
+media:
+  - name: uploads
+    label: 图片
+    input: static/uploads
+    output: /uploads
+    categories: [image]
+    rename: safe
+
 content:
   - name: posts
     label: 文章
     type: collection
-    path: content/posts
-    filename: "{date}-{slug}.md"
+    path: content/post          # ← 改成单数
+    subfolders: true            # ← 允许每篇文章一个目录包
+    filename:
+      template: "{primary}/index.md"
+      field: create             # ← 新建时让你手动填目录名，避免中文标题 slugify 变空
+    format: yaml-frontmatter
+    view:
+      primary: title
+      sort: date
+      order: desc
     fields:
       - name: title
         type: string
+        label: 标题
       - name: date
         type: date
+        label: 日期
       - name: draft
         type: boolean
+        label: 草稿
+      - name: description
+        type: text
+        label: 摘要
+      - name: image
+        type: image
+        label: 封面
+      - name: categories
+        type: string
+        list: true
+        label: 分类
+      - name: tags
+        type: string
+        list: true
+        label: 标签
       - name: body
         type: rich-text
+        label: 正文
+
+settings:
+  content:
+    merge: true                 # ← 关键：保存时合并而非重写，保住 schema 外的 weight/slug 等字段
+  commit:
+    identity: user
