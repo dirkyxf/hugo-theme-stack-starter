@@ -1,20 +1,30 @@
 ---
-title: Hello World
-description: Welcome to Hugo Theme Stack
+title: Blog建立
+description: dirkyxf的blog正式建立
 slug: hello-world
-date: 2022-03-06 00:00:00+0000
-image: cover.jpg
+date: 2026-09-30
 categories:
-    - Example Category
+  - Blog
 tags:
-    - Example Tag
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+  - Blog
+weight: 1
+draft: false
 ---
+dirkyxf的blog正式建立。
 
-Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!
+# 技术栈
 
-For more information about this theme, check the documentation: https://stack.jimmycai.com/
+服务全部依托于云端
 
-Want a site like this? Check out [hugo-theme-stack-stater](https://github.com/CaiJimmy/hugo-theme-stack-starter)
+ [app.pagescms.org](http://app.pagescms.org) => Github (repo+publish) => Cloudflare Pages => domain
 
-> Photo by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski) on [Unsplash](https://unsplash.com/)
+前端用hugo
+
+CMS用pages CMS
+
+# 未来用途
+
+- 一些折腾过的IT项目
+- 个人的一些随想
+- 备忘
+
