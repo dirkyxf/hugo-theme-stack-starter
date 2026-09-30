@@ -1,0 +1,16 @@
+media: static/uploads
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: content/posts
+    filename: "{date}-{slug}.md"
+    fields:
+      - name: title
+        type: string
+      - name: date
+        type: date
+      - name: draft
+        type: boolean
+      - name: body
+        type: rich-text
