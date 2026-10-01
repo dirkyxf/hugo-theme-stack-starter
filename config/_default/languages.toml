@@ -2,10 +2,8 @@
 [en]
     label     = "English"
     direction = "ltr"
-    title     = "Example Site"
     weight    = 1
 [zh]
-    label     = "Chinese"
+    label     = "中文"
     direction = "ltr"
-    title     = "Example Site"
     weight    = 2
