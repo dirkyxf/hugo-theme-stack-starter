@@ -4,7 +4,7 @@
     direction = "ltr"
     title     = "Example Site"
     weight    = 1
-[zh-cn]
+[zh]
     label     = "Chinese"
     direction = "ltr"
     title     = "Example Site"
