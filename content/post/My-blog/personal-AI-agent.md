@@ -4,9 +4,9 @@ description: 个人Agent的简略发展路程
 slug: My-blog
 date: 2026-10-02
 categories:
-  - AI Agent
+  - AIAgent
 tags:
-  - AI Agent
+  - AIAgent
 weight: 1
 draft: false
 ---
