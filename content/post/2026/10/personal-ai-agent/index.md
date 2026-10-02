@@ -4,9 +4,9 @@ description: 个人Agent的简略发展路程
 slug: personal-ai-agent
 date: 2026-10-02
 categories:
-  - AIAgent
+  - AI Agent
 tags:
-  - AIAgent
+  - AI Agent
 weight: 1
 draft: false
 ---
