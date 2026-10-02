@@ -1,7 +1,7 @@
 ---
 title: 个人Agent的简略发展路程
 description: 个人Agent的简略发展路程
-slug: My-blog
+slug: personal-ai-agent
 date: 2026-10-02
 categories:
   - AIAgent
@@ -33,5 +33,4 @@ Grok在2026年8月11日发布了Grok Bot，在圈子里面引领起了热潮。�
 * SKILL，MCP，应用等接入更加友好，点个按钮验证一下就好了
 
 总代来说就是把龙虾时代的各种痛点解决了，把之前都要一个个配置的东西，厂家全部给你配置好了，你开箱即用就行。
-
 
