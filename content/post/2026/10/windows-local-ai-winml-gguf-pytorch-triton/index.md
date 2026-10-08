@@ -2,6 +2,7 @@
 title: "Windows 本地 AI 开发进展：PyTorch、llama.cpp 与 Windows ML"
 description: "微软介绍 Windows ML 对 GGUF 与 llama.cpp 的实验性支持、原生 Runtime API，以及 Windows on Arm 上 PyTorch 和 Triton 的开发进展。"
 date: 2026-10-08
+slug: windows-local-ai-winml-gguf-pytorch-triton
 categories:
   - AI
 tags:
