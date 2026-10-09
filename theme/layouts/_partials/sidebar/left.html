@@ -62,34 +62,46 @@
             </a>
         </li>
         {{ end }}
-        <li class="menu-bottom-section">
-            <ol class="menu">
-                {{- $currentLanguageCode := .Language.Name -}}
-                {{ if hugo.IsMultilingual }}
-                    <li id="i18n-switch">  
-                        {{ partial "helper/icon" "language" }}
-                        <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
-                            {{ range .Site.Home.AllTranslations }}
-                                {{ $target := . }}
-                                {{ range $.AllTranslations }}
-                                    {{ if eq .Language.Name $target.Language.Name }}
-                                        {{ $target = . }}
-                                    {{ end }}
-                                {{ end }}
-                                <option value="{{ $target.RelPermalink }}" {{ if eq $target.Language.Name $currentLanguageCode }}selected{{ end }}>{{ .Language.Label }}</option>
-                            {{ end }}
-                        </select>
-                    </li>
-                {{ end }}
+    </ol>
 
-                {{ if .Site.Params.colorScheme.toggle }}
-                    <li id="dark-mode-toggle">
-                        {{ partial "helper/icon" "toggle-left" }}
-                        {{ partial "helper/icon" "toggle-right" }}
-                        <span>{{ T "darkMode" }}</span>
-                    </li>
-                {{ end }}
-            </ol>
-        </li>
+    {{ if .Scratch.Get "showHomepageWidgets" }}
+        {{ partial "sidebar/widgets.html" (dict "Context" . "Scope" "homepage") }}
+    {{ end }}
+
+    <ol class="menu sidebar-bottom-menu">
+        {{ with .Site.GetPage "/page/links" }}
+            <li {{ if eq $.RelPermalink .RelPermalink }}class="current"{{ end }}>
+                <a href="{{ .RelPermalink }}">
+                    {{ partial "helper/icon" "link" }}
+                    <span>{{ .Title }}</span>
+                </a>
+            </li>
+        {{ end }}
+
+        {{- $currentLanguageCode := .Language.Name -}}
+        {{ if hugo.IsMultilingual }}
+            <li id="i18n-switch">
+                {{ partial "helper/icon" "language" }}
+                <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    {{ range .Site.Home.AllTranslations }}
+                        {{ $target := . }}
+                        {{ range $.AllTranslations }}
+                            {{ if eq .Language.Name $target.Language.Name }}
+                                {{ $target = . }}
+                            {{ end }}
+                        {{ end }}
+                        <option value="{{ $target.RelPermalink }}" {{ if eq $target.Language.Name $currentLanguageCode }}selected{{ end }}>{{ .Language.Label }}</option>
+                    {{ end }}
+                </select>
+            </li>
+        {{ end }}
+
+        {{ if .Site.Params.colorScheme.toggle }}
+            <li id="dark-mode-toggle">
+                {{ partial "helper/icon" "toggle-left" }}
+                {{ partial "helper/icon" "toggle-right" }}
+                <span>{{ T "darkMode" }}</span>
+            </li>
+        {{ end }}
     </ol>
 </aside>

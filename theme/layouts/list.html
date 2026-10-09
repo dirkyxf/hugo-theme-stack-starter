@@ -1,3 +1,10 @@
+{{ define "body-class" }}home-layout{{ end }}
+
+{{ define "left-sidebar" }}
+    {{ .Scratch.Set "showHomepageWidgets" true }}
+    {{ partial "sidebar/left.html" . }}
+{{ end }}
+
 {{ define "main" }}
     <header>
         <h3 class="section-title">
@@ -71,8 +78,4 @@
     {{- partial "pagination.html" . -}}
 
     {{ partialCached "footer/footer" . }}
-{{ end }}
-
-{{ define "right-sidebar" }}
-    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
 {{ end }}

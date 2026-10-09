@@ -101,6 +101,13 @@
     }
 }
 
+.sidebar-widgets {
+    display: flex;
+    flex-direction: column;
+    gap: var(--widget-separation);
+    min-width: 0;
+}
+
 .sidebar header {
     z-index: 1;
     transition: box-shadow 0.5s ease;
